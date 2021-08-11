@@ -127,8 +127,8 @@ background: linear-gradient(0deg, rgba(35, 79, 109, 0.3785889356) 0%, #5F5B6B 10
 }
 
 #social_cc{
-    background-color: #333333;
-    border-radius: 10px;
+    background-color: rgba(51, 51, 51, 75%);
+    border-radius: 20px;
 }
 
 #sec_point {
@@ -147,6 +147,9 @@ background: linear-gradient(0deg, rgba(35, 79, 109, 0.3785889356) 0%, #5F5B6B 10
 @media (max-width: 992px) {
     h1 {
         font-size: 2.4rem;
+    }
+    #social_cc{
+        width: 100% !important;
     }
 }
 
