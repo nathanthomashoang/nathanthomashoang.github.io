@@ -8,6 +8,10 @@ body {
     border-radius: 50%;
 }
 
+#headerText {
+    color: #D65108;
+}
+
 #skills .card {
     background: linear-gradient(-200deg, rgba(247, 237, 226, 0.5) 25%, #7F7979 100%);
 }
