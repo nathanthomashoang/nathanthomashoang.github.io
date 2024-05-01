@@ -146,6 +146,10 @@ background: linear-gradient(0deg, rgba(35, 79, 109, 0.3785889356) 0%, #5F5B6B 10
     .media, .card-meta {
         display: none;
     }
+
+    .card-title {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 992px) {
