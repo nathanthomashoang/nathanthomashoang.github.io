@@ -2,367 +2,394 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nathan Hoang | Software Engineer</title>
-    <!-- favicon -->
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- google fonts -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Nathan Hoang | Full-Stack Software Engineer</title>
+    <meta name="description"
+        content="Nathan Hoang is a full-stack software engineer in the San Francisco Bay Area with five-plus years shipping and scaling SaaS in React, TypeScript, PHP and Node.js.">
+    <link rel="canonical" href="https://natehoang.com/">
+    <meta name="theme-color" content="#f3f2f2">
+
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://natehoang.com/">
+    <meta property="og:title" content="Nathan Hoang | Full-Stack Software Engineer">
+    <meta property="og:description"
+        content="Five-plus years shipping and scaling SaaS in React, TypeScript, PHP and Node.js.">
+    <meta property="og:image" content="https://natehoang.com/images/profile.jpeg">
+    <meta name="twitter:card" content="summary">
+
+    <!-- Archivo — the design system's only typeface. Same URL the stylesheet
+         imports, so the browser fetches it once. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@900&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap">
 
-    <!-- fontAwesome -->
-    <script src="https://kit.fontawesome.com/f385b85b3b.js" crossorigin="anonymous"></script>
+    <!-- Modernist design system, then the page styles built on its tokens. -->
+    <link rel="stylesheet" href="css/modernist.css">
+    <link rel="stylesheet" href="css/site.css">
 
-    <!-- css stylesheet -->
-    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/site.js" defer></script>
+
+    <noscript>
+        <style>
+            .exp__panel[hidden] { display: block !important; }
+            .exp__mark { display: none; }
+            .exp__btn { cursor: default; }
+        </style>
+    </noscript>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navlinks"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navlinks">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link" href="#portfolio">Portfolio</a>
-                    <a class="nav-link" href="#resume">Resume</a>
-                    <a class="nav-link" href="#contact">Contact</a>
+    <a class="skip-link" href="#main">SKIP TO CONTENT</a>
+
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Primary">
+            <a class="site-nav__brand" href="#top">NATHAN HOANG</a>
+            <div class="site-nav__links">
+                <a href="#experience">EXPERIENCE</a>
+                <a href="#skills">SKILLS</a>
+                <a href="#work">WORK</a>
+                <a href="#about">ABOUT</a>
+            </div>
+            <a class="btn btn-primary site-nav__cta" href="#contact">GET IN TOUCH</a>
+        </nav>
+    </header>
+
+    <main id="main">
+
+        <section class="hero" id="top" aria-label="Introduction">
+            <div class="hero__main">
+                <div class="hero__meta">
+                    <span>FULL-STACK SOFTWARE ENGINEER</span>
+                    <span>SAN FRANCISCO BAY AREA &middot; REMOTE</span>
+                    <span>FIVE-PLUS YEARS</span>
+                </div>
+                <h1 class="hero__title">Builds SaaS<br>that holds up<br>under load.</h1>
+                <hr class="hr hero__rule">
+                <p class="hero__lede"><span class="dropcap">F</span>ive-plus years shipping and scaling products in
+                    React, TypeScript, PHP and Node.js. I design systems end to end and spend time on the parts teams put off: containerizing environments, automating deploys, and keeping tests that actually catch things.</p>
+                <div class="hero__actions">
+                    <a class="btn btn-primary" href="#work">SEE THE WORK</a>
+                    <a class="btn btn-secondary" href="#experience">READ THE EXPERIENCE</a>
                 </div>
             </div>
+
+            <div class="hero__side">
+                <figure class="hero__figure">
+                    <div class="grayscale">
+                        <img src="images/profile.jpeg" alt="Portrait of Nathan Hoang" width="1867" height="1819">
+                    </div>
+                    <figcaption>NATHAN HOANG &mdash; HAYWARD, CALIFORNIA</figcaption>
+                </figure>
+                <div class="hero__panel">
+                    <p class="label">MOST RECENTLY</p>
+                    <p class="hero__role">Software Engineer<br>at Deep Sync</p>
+                    <p class="hero__status">Available for new work</p>
+                    <hr class="hr">
+                    <p class="label">ELSEWHERE</p>
+                    <a href="https://www.linkedin.com/in/nathanthomashoang" target="_blank"
+                        rel="noreferrer noopener">LinkedIn &#8599;</a>
+                    <a href="https://github.com/nathanthomashoang" target="_blank"
+                        rel="noreferrer noopener">GitHub &#8599;</a>
+                    <a href="https://twitter.com/nat3ure" target="_blank" rel="noreferrer noopener">Twitter &#8599;</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee__track">
+                <span>TYPESCRIPT &middot; REACT &middot; NEXT.JS &middot; NODE.JS &middot; PHP &middot; LARAVEL &middot;
+                    SYMFONY &middot; NESTJS &middot; MYSQL &middot; AWS &middot; DOCKER &middot; TERRAFORM &middot;
+                    TEMPORAL &middot; AIRFLOW &middot; CYPRESS &middot; JEST&nbsp;&middot;&nbsp;</span><span>TYPESCRIPT
+                    &middot; REACT &middot; NEXT.JS &middot; NODE.JS &middot; PHP &middot; LARAVEL &middot; SYMFONY
+                    &middot; NESTJS &middot; MYSQL &middot; AWS &middot; DOCKER &middot; TERRAFORM &middot; TEMPORAL
+                    &middot; AIRFLOW &middot; CYPRESS &middot; JEST&nbsp;&middot;&nbsp;</span>
+            </div>
         </div>
-    </nav>
 
-    <div class="container">
-        <main class="mb-3">
-            <section class="mb-5" id="header">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 mb-3 mb-md-0 d-flex justify-content-center align-items-center ">
-                            <img src="images/profile.jpeg" alt="headerImg" class="img-fluid" id="headerimg"
-                                height="460" width="460">
-                        </div>
-                        <div class="col-md-6 d-flex flex-column justify-content-center text-center" id="headerSnippet">
-                            <h1>Hi there, <span class="d-inline-block">I'm Nate</span></h1>
-                            <p class="lead">I'm a <span class="secondaryColor">software engineer</span> with extensive <span
-                                class="secondaryColor">customer success</span> experience from the San Francisco Bay
-                                Area. I bring a unique customer-centric perspective to building responsive sites and web applications.</p>
-                            <hr>
-                            <div>
-                                <a class="btn btn-success m-2 px-lg-5 rounded-pill py-2" href="#resume">View Resume</a>
-                                <a class="btn btn-warning m-2 px-lg-5 rounded-pill py-2" href="#portfolio">View
-                                    Portfolio</a>
-                            </div>
-                            <hr>
-                            <div>
-                                <ul class="social p-0 m-0">
-                                    <li>
-                                        <a target="_blank" rel="noreferrer noopener"
-                                            href="https://www.linkedin.com/in/nathanthomashoang">
-                                            <i class="fa-brands fa-linkedin"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" rel="noreferrer noopener"
-                                            href="https://github.com/nathanthomashoang">
-                                            <i class="fa-brands fa-github"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" rel="noreferrer noopener" href="https://twitter.com/nat3ure">
-                                            <i class="fa-brands fa-x-twitter"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+        <section class="section" id="experience" aria-labelledby="exp-h">
+            <div class="section__head">
+                <span class="section__num">01</span>
+                <h2 class="section__title" id="exp-h">EXPERIENCE</h2>
+                <span class="section__note">Open a role for the detail</span>
+            </div>
+
+            <div class="exp">
+                <h3 class="exp__h"><button class="exp__btn" type="button" id="exp-0-btn" aria-controls="exp-0"
+                        aria-expanded="true">
+                        <span class="exp__lead">
+                            <span class="exp__years">2025&mdash;26</span>
+                            <span class="exp__role">Software Engineer, Deep Sync</span>
+                            <span class="exp__meta">Remote &middot; Laravel &middot; TypeScript &middot; React &middot;
+                                Spring Boot</span>
+                        </span>
+                        <span class="exp__mark" aria-hidden="true">&ndash;</span>
+                    </button></h3>
+                <div class="exp__panel" id="exp-0" role="region" aria-labelledby="exp-0-btn">
+                    <ul class="bullets">
+                        <li>Led technical design for a multi-site unification initiative, partnering with executive and
+                            product stakeholders to define target architecture and a phased integration strategy aligned
+                            to long-term business goals.</li>
+                        <li>Shipped features and enhancements across 10+ production PHP/Laravel web properties,
+                            sustaining quality through automated test coverage and peer code review.</li>
+                        <li>Modernized engineering practice by standardizing source control in GitHub, containerizing
+                            environments with Docker, and building CI/CD pipelines with unit and integration testing,
+                            reducing release cycle time by 70% and eliminating manual deploy steps.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp">
+                <h3 class="exp__h"><button class="exp__btn" type="button" id="exp-1-btn" aria-controls="exp-1"
+                        aria-expanded="false">
+                        <span class="exp__lead">
+                            <span class="exp__years">2024&mdash;25</span>
+                            <span class="exp__role">Software Engineer, Eventeny</span>
+                            <span class="exp__meta">Remote &middot; TypeScript &middot; NestJS &middot; Next.js &middot;
+                                PHP</span>
+                        </span>
+                        <span class="exp__mark" aria-hidden="true">+</span>
+                    </button></h3>
+                <div class="exp__panel" id="exp-1" role="region" aria-labelledby="exp-1-btn" hidden>
+                    <ul class="bullets">
+                        <li>Built and maintained customer-facing features across an event management SaaS platform used
+                            by thousands of organizers, owning work from requirements through release.</li>
+                        <li>Co-designed a company-wide public API initiative with cross-functional partners, driving
+                            decisions on endpoint design, data models, and versioning to unlock integrations with
+                            third-parties and new customers.</li>
+                        <li>Introduced planning protocols and documentation standards adopted org-wide, improving sprint
+                            predictability and reducing rework.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp">
+                <h3 class="exp__h"><button class="exp__btn" type="button" id="exp-2-btn" aria-controls="exp-2"
+                        aria-expanded="false">
+                        <span class="exp__lead">
+                            <span class="exp__years">2022&mdash;24</span>
+                            <span class="exp__role">Software Engineer, JazzHR</span>
+                            <span class="exp__meta">Remote &middot; React &middot; TypeScript &middot; Symfony &middot;
+                                MySQL</span>
+                        </span>
+                        <span class="exp__mark" aria-hidden="true">+</span>
+                    </button></h3>
+                <div class="exp__panel" id="exp-2" role="region" aria-labelledby="exp-2-btn" hidden>
+                    <ul class="bullets">
+                        <li>Architected, developed, and maintained core features across JazzHR's recruiting SaaS suite
+                            using React, TypeScript, AngularJS, PHP, Symfony, and MySQL, supporting thousands of
+                            customers.</li>
+                        <li>Led engineering for a company-critical compliance initiative, delivering updates to the web
+                            application and public API to meet EEOC and OFCCP requirements on deadline with zero
+                            production incidents.</li>
+                        <li>Served as escalation engineer for critical production issues, driving root-cause analysis and
+                            authoring runbooks that enabled teams to self-resolve routine cases.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp">
+                <h3 class="exp__h"><button class="exp__btn" type="button" id="exp-3-btn" aria-controls="exp-3"
+                        aria-expanded="false">
+                        <span class="exp__lead">
+                            <span class="exp__years">2021&mdash;22</span>
+                            <span class="exp__role">Support Reliability Engineer, Deputy</span>
+                            <span class="exp__meta">Remote &middot; Node.js &middot; JavaScript</span>
+                        </span>
+                        <span class="exp__mark" aria-hidden="true">+</span>
+                    </button></h3>
+                <div class="exp__panel" id="exp-3" role="region" aria-labelledby="exp-3-btn" hidden>
+                    <ul class="bullets">
+                        <li>Built and maintained JavaScript and Node.js tooling for the global support team, making
+                            day-to-day client troubleshooting faster and less manual.</li>
+                        <li>Served as technical escalation for strategic and VIP accounts, partnering with engineering
+                            to debug production issues in the codebase.</li>
+                        <li>Led training and knowledge-sharing across the global support team, including API
+                            training.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp exp--last">
+                <h3 class="exp__h"><button class="exp__btn" type="button" id="exp-4-btn" aria-controls="exp-4"
+                        aria-expanded="false">
+                        <span class="exp__lead">
+                            <span class="exp__years">2018&mdash;21</span>
+                            <span class="exp__role">Client Success, Indeed</span>
+                            <span class="exp__meta">Bay Area &middot; Enterprise accounts</span>
+                        </span>
+                        <span class="exp__mark" aria-hidden="true">+</span>
+                    </button></h3>
+                <div class="exp__panel" id="exp-4" role="region" aria-labelledby="exp-4-btn" hidden>
+                    <div class="exp__detail">
+                        <p class="exp__stint">Client Success Specialist, Ad Agencies (2018) &rarr; Senior Client Success
+                            Specialist, Enterprise (2019&mdash;21)</p>
+                        <ul class="bullets bullets--flush">
+                            <li>Owned on-demand technical support and day-to-day campaign management for 30+ enterprise
+                                accounts representing $220K in monthly revenue.</li>
+                            <li>Triaged and resolved technical issues across Jira, Salesforce and internal systems,
+                                cutting time to identify, investigate and resolve by up to 30%.</li>
+                            <li>Served as the go-to product expert for 7+ new hires, running ongoing training and
+                                mentoring.</li>
+                            <li>Worked across Sales, Product and Global teams to shape account strategy, and led
+                                client-facing performance reviews that drove feature adoption.</li>
+                        </ul>
                     </div>
                 </div>
-            </section>
-            <section class="mb-4" id="skills">
-                <h2 class="mb-3"><span id="sec_point">|</span> My key skills at a glance</h2>
-                <div class="card text-center mb-4">
-                    <!-- <div class="card-header">
-                        Professional Skills
-                    </div> -->
-                    <div class="card-body d-flex flex-column">
-                        <div class="row my-lg-3">
-                            <div class="col-4 mb-3 mb-lg-0 col-lg-2">
-                                <i class="fab fa-react fa-lg"></i>
-                                <h5 class="card-title">ReactJS</h5>
-                            </div>
-                            <div class="col-4 mb-3 mb-lg-0 col-lg-2">
-                                <i class="fab fa-js-square fa-lg"></i>
-                                <h5 class="card-title">JavaScript</h5>
-                            </div>
-                            <div class="col-4 mb-3 mb-lg-0 col-lg-2">
-                                <i class="fas fa-window-maximize fa-lg"></i>
-                                <h5 class="card-title">Next.js</h5>
-                            </div>
-                            <div class="col-4 mb-3 mb-lg-0 col-lg-2">
-                                <i class="fas fa-palette fa-lg"></i>
-                                <h5 class="card-title">Material UI</h5>
-                            </div>
-                            <div class="col-4 mb-3 mb-lg-0 col-lg-2">
-                                <i class="fas fa-database fa-lg"></i>
-                                <h5 class="card-title">MySQL</h5>
-                            </div>
-                            <div class="col-4 mb-3 mb-lg-0 col-lg-2">
-                                <i class="fab fa-node-js fa-lg"></i>
-                                <h5 class="card-title">Node.js</h5>
-                            </div>
-                        </div>
-                        <div class="row mb-lg-3">
-                            <div class="col-4 mb-3 mb-lg-0 col-lg-2">
-                                <i class="fab fa-php fa-lg"></i>
-                                <h5 class="card-title">PHP</h5>
-                            </div>
-                            <div class="col-4 mb-3 mb-lg-0 col-lg-2">
-                                <i class="fab fa-symfony fa-lg"></i>
-                                <h5 class="card-title">Symfony</h5>
-                            </div>
-                            <div class="col-4 mb-3 mb-lg-0 col-lg-2">
-                                <i class="fab fa-npm fa-lg"></i>
-                                <h5 class="card-title">NPM</h5>
-                            </div>
-                            <div class="col-4 mb-3 mb-lg-0 col-lg-2">
-                                <i class="fas fa-server fa-lg"></i>
-                                <h5 class="card-title">Express.js</h5>
-                            </div>
-                            <div class="col-4 mb-3 mb-lg-0 col-lg-2">
-                                <i class="fab fa-bootstrap fa-lg"></i>
-                                <h5 class="card-title">Bootstrap</h5>
-                            </div>
-                            <div class="col-4 mb-3 mb-lg-0 col-lg-2">
-                                <i class="fab fa-css3-alt fa-lg"></i>
-                                <h5 class="card-title">CSS</h5>
-                            </div>
-                        </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills" aria-labelledby="skills-h">
+            <div class="section__head">
+                <span class="section__num">02</span>
+                <h2 class="section__title" id="skills-h">SKILLS</h2>
+            </div>
+            <div class="skills-grid">
+                <div>
+                    <h3>Languages</h3>
+                    <p>TypeScript &middot; JavaScript &middot; PHP &middot; Java &middot; SQL</p>
+                </div>
+                <div>
+                    <h3>Frontend</h3>
+                    <p>React &middot; Next.js &middot; AngularJS &middot; Material UI &middot; Tailwind CSS</p>
+                </div>
+                <div>
+                    <h3>Backend &amp; Data</h3>
+                    <p>Laravel &middot; Symfony &middot; NestJS &middot; Node.js &middot; Spring Boot &middot; REST APIs
+                        &middot; MySQL &middot; SQL Server &middot; Temporal &middot; Apache Airflow</p>
+                </div>
+                <div>
+                    <h3>Cloud &amp; DevOps</h3>
+                    <p>AWS &middot; Docker &middot; Terraform &middot; CI/CD (GitHub Actions) &middot; Rancher &middot;
+                        New Relic</p>
+                </div>
+                <div>
+                    <h3>Practices &amp; Tools</h3>
+                    <p>Test-Driven Development &middot; Jest &middot; Cypress &middot; Code Review &middot; System
+                        Design &middot; Agile (Scrum, Kanban) &middot; Git/GitHub &middot; Jira &middot; Postman</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="work" aria-labelledby="work-h">
+            <div class="section__head">
+                <span class="section__num">03</span>
+                <h2 class="section__title" id="work-h">SELECTED WORK</h2>
+                <span class="section__note">Personal builds &mdash; client and employer work isn't available to
+                    showcase</span>
+            </div>
+            <div class="work-grid">
+                <a class="work-card" href="https://natehoang.com/bazaarhome/" target="_blank"
+                    rel="noreferrer noopener">
+                    <div class="work-card__media grayscale">
+                        <img src="images/projects/bazaardemo.png" alt="Bazaar home page demo screenshot" width="640"
+                            height="522" loading="lazy">
                     </div>
-                </div>
-                <hr>
-            </section>
-
-            <section id="portfolio">
-                <h2 class="mb-3"><span id="sec_point">|</span> Featured Projects</h2>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6 col-lg-3 mb-3">
-                            <div class="card text-white card-has-bg"
-                                style="background-image:url('images/projects/bazaardemo.png');">
-                                <img class="card-img d-none" src="images/projects/bazaardemo.png" alt="baazardemo">
-                                <div class="card-img-overlay d-flex flex-column">
-                                    <div class="card-body">
-                                        <small class="card-meta mb-2">Front-End & UI Design</small>
-                                        <h4 class="card-title mt-0"><a class="text-white stretched-link" target="_blank"
-                                                rel="noreferrer noopener"
-                                                href="https://natehoang.com/bazaarhome/">Bazaar Home Page Demo</a></h4>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="media">
-                                            <div class="media-body">
-                                                <!-- <h6 class="my-0 text-white d-block">HTML, CSS, Bootstrap
-                                                </h6> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <div class="col-6 col-lg-3 mb-3">
-                            <div class="card text-white card-has-bg"
-                                style="background-image:url('images/projects/stadiumadvisor.png');">
-                                <img class="card-img d-none" src="images/projects/stadiumadvisor.png"
-                                    alt="stadiumadvisor">
-                                <div class="card-img-overlay d-flex flex-column">
-                                    <div class="card-body">
-                                        <small class="card-meta mb-2">Full-Stack</small>
-                                        <h4 class="card-title mt-0"><a class="text-white stretched-link" target="_blank"
-                                                rel="noreferrer noopener"
-                                                href="https://immense-peak-61285.herokuapp.com/">Stadium Advisor</a></h4>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="media">
-                                            <div class="media-body">
-                                                <h6 class="my-0 text-white d-block">HTML, CSS, JS, Express,
-                                                    Node.js, MongoDB, EJS, NPM, AJAX, Bootstrap
-                                                </h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <div class="col-6 col-lg-3 mb-3">
-                            <div class="card text-white card-has-bg"
-                                style="background-image:url('images/projects/quiz.png');">
-                                <img class="card-img d-none" src="images/projects/quiz.png" alt="buzzfeedStyleQuiz">
-                                <div class="card-img-overlay d-flex flex-column">
-                                    <div class="card-body">
-                                        <small class="card-meta mb-2">Front-End</small>
-                                        <h4 class="card-title mt-0"><a class="text-white stretched-link" target="_blank"
-                                                rel="noreferrer noopener"
-                                                href="https://nathanthomashoang.github.io/buzzfeedstyle-quiz/">BuzzFeed
-                                                Style Quiz</a></h4>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="media">
-                                            <div class="media-body">
-                                                <!-- <h6 class="my-0 text-white d-block">HTML, CSS, JS, Bulma
-                                                </h6> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3 mb-3">
-                            <div class="card text-white card-has-bg"
-                                style="background-image:url('images/projects/redditclone.png');">
-                                <img class="card-img d-none" src="images/projects/redditclone.png"
-                                    alt="reddithomepageclone">
-                                <div class="card-img-overlay d-flex flex-column">
-                                    <div class="card-body">
-                                        <small class="card-meta mb-2">Front-End</small>
-                                        <h4 class="card-title mt-0"><a class="text-white stretched-link" target="_blank"
-                                                rel="noreferrer noopener"
-                                                href="https://nathanthomashoang.github.io/redditclone/">Reddit Home Page
-                                                Clone</a></h4>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="media">
-                                            <div class="media-body">
-                                                <!-- <h6 class="my-0 text-white d-block">HTML, CSS, Bootstrap
-                                                </h6> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3 mb-3">
-                            <div class="card text-white card-has-bg"
-                                style="background-image:url('images/projects/TVshowApp.png');">
-                                <img class="card-img d-none" src="images/projects/TVshowApp.png" alt="TVShowSearch">
-                                <div class="card-img-overlay d-flex flex-column">
-                                    <div class="card-body">
-                                        <small class="card-meta mb-2">Front-End: API</small>
-                                        <h4 class="card-title mt-0"><a class="text-white stretched-link" target="_blank"
-                                                rel="noreferrer noopener"
-                                                href="https://nathanthomashoang.github.io/TVShowSearch/">TV Show
-                                                Search</a>
-                                        </h4>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="media">
-                                            <div class="media-body">
-                                                <!-- <h6 class="my-0 text-white d-block">HTML, JS, CSS,
-                                                    Bootstrap, JSON, Axios, AJAX
-                                                </h6> -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-lg-3 mb-3">
-                            <div class="card text-white card-has-bg"
-                                style="background-image:url('images/projects/styler.png');">
-                                <img class="card-img d-none" src="images/projects/styler.png"
-                                    alt="styler app">
-                                <div class="card-img-overlay d-flex flex-column">
-                                    <div class="card-body">
-                                        <small class="card-meta mb-2">Front-End</small>
-                                        <h4 class="card-title mt-0"><a class="text-white stretched-link" target="_blank"
-                                                rel="noreferrer noopener"
-                                                href="https://nathanthomashoang.github.io/styler-app/">The Styler</a></h4>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="media">
-                                            <div class="media-body">
-                                                <h6 class="my-0 text-white d-block">React, Next.js, Material UI 
-                                                </h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- row-->
-                </div>
-                <hr>
-            </section>
-            <section id="resume">
-                <h2 class="mb-3"><span id="sec_point">|</span> My Resume</h2>
-                <a href="https://drive.google.com/uc?id=1hhgI0unFDcfNjkb7Ep2E6tf09aDfQi52&export=download"
-                    class=" mx-5 d-lg-none btn btn-lg btn-success my-5 d-flex text-center justify-content-center align-items-center rounded-pill">
-                    Download My Resume</a>
-                <!-- large screens/desktop only -->
-                <div class="card mb-4 d-none d-lg-block">
-                    <div class="card-body">
-                        <div>
-                            <a href="https://drive.google.com/uc?id=1hhgI0unFDcfNjkb7Ep2E6tf09aDfQi52&export=download"
-                                class="btn btn-lg btn-success mb-2 rounded-pill">Download My
-                                Resume</a>
-                        </div>
-                        <iframe class="mb-2" src="pdf/NTH_2024.pdf#toolbar=0" height="700" width=100%></iframe>
+                    <div class="work-card__body">
+                        <p class="work-card__kicker">FRONT-END &amp; UI DESIGN</p>
+                        <h3 class="work-card__title">Bazaar Home Page Demo &#8599;</h3>
+                        <p class="work-card__tech">React, Next.js, Material UI</p>
                     </div>
-                </div>
-                <hr>
-            </section>
-
-            <section class="contact" id="contact">
-                <h2 class="mb-3"><span id="sec_point">|</span> Contact Me:</h2>
-                <div class="card text-white card-has-bg" style="background-image:url(images/hello.jpeg);">
-                    <div class="card-img-overlay col-md-6 d-flex flex-column justify-content-center">
-                        <h3 class="card-title">Contact Me</h3>
-                        <p class="card-text lead">I'm currently taking on freelance work and also open to full-time
-                            opportunities</p>
-                        <a href="mailto:nathanthomashoang@gmail.com" class="btn btn-warning btn-lg mb-5 w-50">Email
-                            Me</a>
-                        <div class="w-75" id="social_cc">
-                            <ul class="social list-inline mb-0 d-flex justify-content-evenly">
-                                <li>
-                                    <a target="_blank" rel="noreferrer noopener"
-                                        href="https://www.linkedin.com/in/nathanthomashoang">
-                                        <i class="fa-brands fa-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a target="_blank" rel="noreferrer noopener"
-                                        href="https://github.com/nathanthomashoang">
-                                        <i class="fa-brands fa-github"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a target="_blank" rel="noreferrer noopener" href="https://twitter.com/nat3ure">
-                                        <i class="fa-brands fa-x-twitter"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                </a>
+                <a class="work-card" href="https://nathanthomashoang.github.io/buzzfeedstyle-quiz/" target="_blank"
+                    rel="noreferrer noopener">
+                    <div class="work-card__media grayscale">
+                        <img src="images/projects/quiz.png" alt="BuzzFeed style quiz app screenshot" width="624"
+                            height="640" loading="lazy">
                     </div>
+                    <div class="work-card__body">
+                        <p class="work-card__kicker">FRONT-END</p>
+                        <h3 class="work-card__title">BuzzFeed Style Quiz &#8599;</h3>
+                        <p class="work-card__tech">JavaScript, CSS</p>
+                    </div>
+                </a>
+                <a class="work-card" href="https://nathanthomashoang.github.io/redditclone/" target="_blank"
+                    rel="noreferrer noopener">
+                    <div class="work-card__media grayscale">
+                        <img src="images/projects/redditclone.png" alt="Reddit home page clone screenshot" width="640"
+                            height="496" loading="lazy">
+                    </div>
+                    <div class="work-card__body">
+                        <p class="work-card__kicker">FRONT-END</p>
+                        <h3 class="work-card__title">Reddit Home Page Clone &#8599;</h3>
+                        <p class="work-card__tech">HTML, CSS, Bootstrap</p>
+                    </div>
+                </a>
+                <a class="work-card" href="https://nathanthomashoang.github.io/TVShowSearch/" target="_blank"
+                    rel="noreferrer noopener">
+                    <div class="work-card__media grayscale">
+                        <img src="images/projects/TVshowApp.png" alt="TV show search app screenshot" width="640"
+                            height="626" loading="lazy">
+                    </div>
+                    <div class="work-card__body">
+                        <p class="work-card__kicker">FRONT-END &middot; API</p>
+                        <h3 class="work-card__title">TV Show Search &#8599;</h3>
+                        <p class="work-card__tech">JavaScript, REST API</p>
+                    </div>
+                </a>
+                <a class="work-card" href="https://nathanthomashoang.github.io/styler-app/" target="_blank"
+                    rel="noreferrer noopener">
+                    <div class="work-card__media grayscale">
+                        <img src="images/projects/styler.png" alt="The Styler app screenshot" width="1210" height="958"
+                            loading="lazy">
+                    </div>
+                    <div class="work-card__body">
+                        <p class="work-card__kicker">FRONT-END</p>
+                        <h3 class="work-card__title">The Styler &#8599;</h3>
+                        <p class="work-card__tech">React, Next.js</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="about" id="about" aria-labelledby="about-h">
+            <div class="about__main">
+                <div class="section__head">
+                    <span class="section__num">04</span>
+                    <h2 class="section__title" id="about-h">ABOUT</h2>
                 </div>
-            </section>
+                <p class="about__lede">I came into engineering through customer success, which is why I still think
+                    about the person on the other end of a release. Support taught me what breaks and why people give up
+                    on software; engineering let me go fix it.</p>
+                <p class="about__body">Today that looks like leading architecture work end to end, standardizing how a
+                    team ships, and leaving behind documentation and pipelines the next engineer can trust. Based in
+                    Hayward, California, working remotely but open to hybrid and onsite roles.</p>
+                <hr class="hr">
+                <p class="label">EDUCATION</p>
+                <p class="about__degree">Bachelor of Arts, Economics &mdash; San Diego State University</p>
+                <p class="about__detail">GPA 3.88 &middot; Summa Cum Laude &middot; Phi Beta Kappa Honor Society &middot;
+                    5&times; Dean's List</p>
+            </div>
+            <div class="about__media grayscale">
+                <img src="images/hello.jpeg" alt="Nathan Hoang" width="1050" height="700" loading="lazy">
+            </div>
+        </section>
 
-        </main> <!-- main -->
+        <section class="contact" id="contact" aria-labelledby="contact-h">
+            <p class="contact__num">05 &middot; CONTACT</p>
+            <h2 class="contact__title" id="contact-h">Open to full-time and contract work.</h2>
+            <p class="contact__lede">If you're building something that has to hold up, I'd like to hear about it.</p>
+            <div class="contact__actions">
+                <a class="btn contact__email" href="mailto:nathanthomashoang@gmail.com">nathanthomashoang@gmail.com</a>
+                <a class="btn contact__link" href="https://www.linkedin.com/in/nathanthomashoang" target="_blank"
+                    rel="noreferrer noopener">LINKEDIN &#8599;</a>
+                <a class="btn contact__link" href="https://github.com/nathanthomashoang" target="_blank"
+                    rel="noreferrer noopener">GITHUB &#8599;</a>
+                <a class="btn contact__link" href="https://twitter.com/nat3ure" target="_blank"
+                    rel="noreferrer noopener">TWITTER &#8599;</a>
+            </div>
+        </section>
 
-    </div> <!-- main container -->
+    </main>
 
-    <footer class="py-3 bg-dark text-white mt-5">
-        <div class="container">
-            <p>Nate H. 2021</p>
-        </div>
+    <footer class="site-footer">
+        <span class="site-footer__brand">NATHAN HOANG</span>
+        <span class="site-footer__meta">Full-stack software engineer &middot; San Francisco Bay Area</span>
+        <a class="site-footer__top" href="#top">BACK TO TOP &#8593;</a>
     </footer>
-
-    <script src="js/bootstrap.bundle.min.js"></script>
 
 </body>
 

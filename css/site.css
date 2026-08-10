@@ -1,0 +1,393 @@
+/* ==========================================================================
+   Page styles for natehoang.com — built on the Modernist design system
+   (css/modernist.css). Every color, space and radius comes from a token
+   there; nothing here hard-codes a palette value except the poster
+   section's #f3f2f2, which is the ground color used as ink on accent.
+   ========================================================================== */
+
+/* — base ————————————————————————————————————————————————————————————— */
+
+html { scroll-behavior: smooth; }
+
+body { -webkit-font-smoothing: antialiased; }
+
+/* Accent at paragraph size fails contrast on this ground, so links take the
+   deep ramp step and brighten to the base accent on hover (see readme.md). */
+a { color: var(--color-accent-700); }
+a:hover { color: var(--color-accent); }
+
+/* Header height varies with the viewport; keep anchored sections clear of it. */
+main section[id],
+#top { scroll-margin-top: clamp(72px, 14vw, 112px); }
+
+@keyframes mq {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* — skip link ————————————————————————————————————————————————————————— */
+
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 50;
+  background: var(--color-accent); color: #f3f2f2;
+  padding: 10px 16px; font-weight: 800; font-size: 13px;
+}
+.skip-link:focus { left: 0; }
+.skip-link:hover { color: #f3f2f2; }
+
+/* — header / nav —————————————————————————————————————————————————————— */
+
+.site-header {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--color-bg);
+  border-bottom: 2px solid var(--color-divider);
+}
+.site-nav {
+  display: flex; align-items: center; flex-wrap: wrap;
+  gap: clamp(12px, 2vw, 26px);
+  padding: 13px clamp(18px, 4vw, 44px);
+}
+.site-nav__brand {
+  margin-right: auto;
+  display: inline-flex; align-items: center; min-height: 44px;
+  font-weight: 800; font-size: clamp(15px, 1.5vw, 18px); letter-spacing: -.02em;
+  color: var(--color-text); text-decoration: none;
+}
+.site-nav__brand:hover { color: var(--color-accent); }
+.site-nav__links { display: flex; align-items: center; gap: clamp(12px, 2vw, 26px); }
+.site-nav__links a {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 2px;
+  color: var(--color-text); text-decoration: none;
+  font-size: 13px; letter-spacing: .04em;
+}
+.site-nav__links a:hover { color: var(--color-accent); }
+.site-nav__cta { font-size: 12px; min-height: 44px; padding-inline: 14px; }
+
+/* Below the point where the bar would stack into three rows, drop the links
+   onto their own line as a horizontal strip so the sticky header stays short. */
+@media (max-width: 719px) {
+  .site-nav { gap: 0 12px; padding: 8px clamp(14px, 4vw, 44px) 0; }
+  .site-nav__links {
+    order: 3; flex: 1 0 100%; gap: 18px; margin-top: 4px;
+    overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  }
+  .site-nav__links::-webkit-scrollbar { display: none; }
+  .site-nav__links a { white-space: nowrap; }
+  main section[id], #top { scroll-margin-top: 104px; }
+}
+
+/* — hero —————————————————————————————————————————————————————————————— */
+
+.hero {
+  display: flex; flex-wrap: wrap;
+  border-bottom: 2px solid var(--color-divider);
+}
+.hero__main {
+  flex: 1 1 560px; min-width: 0;
+  padding: clamp(28px, 5vw, 52px) clamp(18px, 4vw, 44px) clamp(30px, 4vw, 44px);
+  border-right: 2px solid var(--color-divider);
+}
+.hero__meta {
+  display: flex; flex-wrap: wrap; gap: 0 clamp(12px, 2vw, 22px);
+  margin: 0 0 clamp(18px, 3vw, 30px);
+  border-top: 2px solid var(--color-divider);
+  border-bottom: 1px solid var(--color-divider);
+  font-size: clamp(10px, 1.1vw, 11px); letter-spacing: .16em;
+  color: var(--color-accent-700);
+}
+.hero__meta span { padding: 9px 0; }
+.hero__meta span + span::before {
+  content: '/'; color: var(--color-neutral-500);
+  margin-right: clamp(12px, 2vw, 22px);
+}
+.hero__title {
+  font-size: clamp(44px, 8vw, 96px); line-height: .92; letter-spacing: -.04em;
+  margin: 0 0 clamp(18px, 2.5vw, 26px);
+}
+.hero__rule { max-width: 52ch; margin: 0 0 clamp(16px, 2vw, 22px); }
+.hero__lede {
+  font-size: clamp(16px, 1.7vw, 19px); line-height: 1.55; max-width: 52ch;
+  margin: 0 0 clamp(20px, 3vw, 30px);
+  color: var(--color-neutral-800); text-wrap: pretty;
+}
+.dropcap {
+  float: left; font-size: clamp(52px, 7vw, 82px); line-height: .78;
+  font-weight: 800; color: var(--color-text);
+  margin: 4px 10px 0 0; letter-spacing: -.04em;
+}
+.hero__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero__actions .btn { min-height: 44px; padding-inline: 18px; }
+
+.hero__side { flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; }
+.hero__figure { margin: 0; border-bottom: 2px solid var(--color-divider); }
+/* The frame keeps a constant ratio so object-fit always crops the same way.
+   Sizing height off the viewport while width came from the flex column let
+   the two drift apart, and the portrait appeared to zoom as you resized. */
+.hero__figure img {
+  width: 100%; height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover; object-position: 50% 34%;
+}
+.hero__figure figcaption {
+  margin-top: 0;
+  padding: 8px clamp(18px, 2.5vw, 24px) 10px;
+  border-top: 1px solid var(--color-divider);
+  font-size: 11px; letter-spacing: .06em; color: var(--color-neutral-700);
+}
+.hero__panel {
+  flex: 1; padding: clamp(18px, 2.5vw, 24px);
+  display: flex; flex-direction: column; gap: 13px;
+}
+.hero__panel p { margin: 0; }
+.hero__panel .hr { margin: 4px 0; }
+.hero__panel a {
+  display: inline-flex; align-items: center; min-height: 44px;
+  font-size: 13px; text-decoration: none;
+}
+.hero__role { font-size: 15px; font-weight: 800; line-height: 1.25; }
+.hero__status { font-size: 13px; font-weight: 800; color: var(--color-accent-700); }
+
+/* The hero's two columns share one 840px flex basis; unhook the vertical
+   rule at the width where they stop sitting side by side. */
+@media (max-width: 839px) {
+  .hero__main { border-right: 0; border-bottom: 2px solid var(--color-divider); }
+  /* Full-bleed banner once the columns stack — one deliberate ratio change at
+     a layout break, rather than a crop that drifts at every width. */
+  .hero__figure img { aspect-ratio: 2 / 1; }
+}
+
+/* With a fixed ratio the portrait would otherwise grow without bound on very
+   wide screens. Capping the column freezes it; the freed space goes to the
+   text column, whose copy is capped at 52ch regardless. */
+@media (min-width: 840px) {
+  .hero__side { max-width: 560px; }
+}
+
+/* Once the meta row wraps, the '/' separator lands at the start of a line
+   with nothing before it. Stack the items and drop the separators instead. */
+@media (max-width: 560px) {
+  .hero__meta { flex-direction: column; gap: 0; }
+  .hero__meta span { padding: 0 0 9px; }
+  .hero__meta span:first-child { padding-top: 9px; }
+  .hero__meta span + span::before { content: none; }
+}
+
+/* — the small caps label used in the hero panel and About ——————————————— */
+
+.label {
+  margin: 0; font-size: 10px; letter-spacing: .14em;
+  color: var(--color-neutral-700);
+}
+
+/* — marquee ——————————————————————————————————————————————————————————— */
+
+.marquee {
+  background: var(--color-text); color: var(--color-bg);
+  overflow: hidden; white-space: nowrap;
+}
+.marquee__track {
+  display: inline-block; padding: 10px 0;
+  font-size: 12px; letter-spacing: .22em;
+  animation: mq 30s linear infinite;
+}
+
+/* — section shell ————————————————————————————————————————————————————— */
+
+.section {
+  padding: clamp(32px, 5vw, 56px) clamp(18px, 4vw, 44px);
+  border-bottom: 2px solid var(--color-divider);
+}
+.section__head {
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: 14px;
+  margin-bottom: clamp(18px, 2.5vw, 26px);
+}
+.section__num { font-size: 11px; letter-spacing: .16em; color: var(--color-accent-700); }
+.section__title { font-size: clamp(22px, 3vw, 30px); margin: 0; letter-spacing: -.02em; }
+.section__note { font-size: 12px; color: var(--color-neutral-700); margin-left: auto; }
+
+@media (max-width: 719px) {
+  .section__note { margin-left: 0; }
+}
+
+/* — experience accordion ——————————————————————————————————————————————— */
+
+.exp { border-top: 2px solid var(--color-divider); }
+.exp--last { border-bottom: 2px solid var(--color-divider); }
+.exp__h { margin: 0; font-size: inherit; line-height: inherit; letter-spacing: normal; }
+/* Two levels on purpose. The outer row never wraps, so the +/- mark is always
+   the last item on the first line. The text group wraps inside it, which is
+   what lets a long tech list reflow without pushing the mark to its own line.
+   Baseline alignment still works: a flex container's baseline is taken from
+   its first line, so the mark lines up with the role no matter how it wraps. */
+.exp__btn {
+  width: 100%; min-height: 44px;
+  display: flex; flex-wrap: nowrap; align-items: baseline; gap: clamp(8px, 2vw, 20px);
+  padding: clamp(16px, 2vw, 20px) 0;
+  background: transparent; border: 0; cursor: pointer; text-align: left;
+  font-family: inherit; color: inherit;
+  transition: background .15s;
+}
+.exp__lead {
+  flex: 1 1 auto; min-width: 0;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: clamp(8px, 2vw, 20px);
+}
+.exp__btn:hover { background: var(--color-accent-100); }
+.exp__btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: -2px; }
+.exp__years {
+  flex: 0 0 108px; font-size: 13px; font-weight: 800; letter-spacing: .02em;
+  color: var(--color-neutral-700);
+}
+.exp__role { flex: 1 1 300px; font-size: clamp(17px, 2vw, 22px); font-weight: 800; letter-spacing: -.02em; }
+.exp__meta { flex: 0 1 auto; font-size: 12px; color: var(--color-neutral-700); }
+.exp__mark { flex: 0 0 20px; text-align: right; font-size: 20px; font-weight: 800; color: var(--color-accent); }
+.exp__panel[hidden] { display: none; }
+.exp__detail {
+  padding: 0 0 clamp(20px, 3vw, 28px) clamp(18px, 12vw, 128px);
+  max-width: 100ch;
+}
+.exp__stint { font-size: 13px; color: var(--color-neutral-700); margin: 0 0 14px; }
+
+.bullets {
+  margin: 0 0 clamp(20px, 3vw, 28px);
+  padding: 0 0 0 clamp(18px, 12vw, 128px);
+  max-width: 100ch;
+  list-style: none; display: flex; flex-direction: column; gap: 12px;
+}
+.bullets li { font-size: 15px; line-height: 1.55; position: relative; padding-left: 18px; }
+.bullets li::before {
+  content: ""; position: absolute; left: 0; top: 7px;
+  width: 7px; height: 7px; background: var(--color-accent);
+}
+.bullets--flush { margin: 0; padding: 0; max-width: none; }
+
+/* — skills grid ———————————————————————————————————————————————————————— */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  border-top: 2px solid var(--color-divider);
+  border-left: 2px solid var(--color-divider);
+}
+.skills-grid > div {
+  padding: clamp(18px, 2.5vw, 24px);
+  border-right: 2px solid var(--color-divider);
+  border-bottom: 2px solid var(--color-divider);
+}
+.skills-grid h3 {
+  margin: 0 0 14px; font-size: 13px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--color-accent-700);
+}
+.skills-grid p { margin: 0; font-size: 15px; line-height: 1.7; }
+
+/* — selected work ————————————————————————————————————————————————————— */
+
+/* Rules are drawn per cell rather than as gaps over a tinted container
+   background: the card count doesn't divide evenly into the column count at
+   every width, and a gap-based grid paints the empty trailing cells as a
+   solid block. Per-cell borders leave a partial row as plain ground. */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  border-top: 2px solid var(--color-divider);
+  border-left: 2px solid var(--color-divider);
+}
+.work-card {
+  display: flex; flex-direction: column;
+  background: var(--color-bg); color: inherit; text-decoration: none;
+  border-right: 2px solid var(--color-divider);
+  border-bottom: 2px solid var(--color-divider);
+  transition: background .15s;
+}
+.work-card:hover { background: var(--color-accent-100); color: inherit; }
+.work-card__media { border-bottom: 2px solid var(--color-divider); }
+.work-card__media img { width: 100%; height: 190px; object-fit: cover; object-position: top; }
+.work-card__body { padding: 18px 20px 22px; }
+.work-card__kicker {
+  margin: 0 0 8px; font-size: 10px; letter-spacing: .12em;
+  color: var(--color-accent-700);
+}
+.work-card__title { margin: 0 0 8px; font-size: 19px; letter-spacing: -.02em; }
+.work-card__tech { margin: 0; font-size: 13px; color: var(--color-neutral-700); }
+
+/* Stacked into a single column, the shared 2px rule reads as a seam rather
+   than a boundary: the next card's image starts straight below the previous
+   card's text. Give each card its own closed border and put ground between
+   them. 652px is where the 300px minimum track forces one column. */
+@media (max-width: 652px) {
+  .work-grid { border-top: 0; border-left: 0; row-gap: clamp(18px, 5vw, 26px); }
+  .work-card { border: 2px solid var(--color-divider); }
+}
+
+/* — about ————————————————————————————————————————————————————————————— */
+
+.about { display: flex; flex-wrap: wrap; border-bottom: 2px solid var(--color-divider); }
+.about__main {
+  flex: 1 1 520px; min-width: 0;
+  padding: clamp(32px, 5vw, 56px) clamp(18px, 4vw, 44px);
+  border-right: 2px solid var(--color-divider);
+}
+.about__lede { font-size: clamp(16px, 1.8vw, 20px); line-height: 1.5; max-width: 56ch; margin: 0 0 18px; }
+.about__body {
+  font-size: 15px; line-height: 1.6; max-width: 60ch; margin: 0 0 26px;
+  color: var(--color-neutral-800);
+}
+.about__degree { font-size: 16px; font-weight: 800; margin: 0 0 6px; }
+.about__detail { font-size: 14px; margin: 0; color: var(--color-neutral-700); }
+.about .label { margin-bottom: 10px; }
+.about__media { flex: 1 1 300px; min-width: 0; }
+.about__media img { width: 100%; height: 100%; min-height: 280px; object-fit: cover; }
+
+@media (max-width: 819px) {
+  .about__main { border-right: 0; border-bottom: 2px solid var(--color-divider); }
+}
+
+/* — contact poster ———————————————————————————————————————————————————— */
+
+.contact {
+  background: var(--color-accent); color: #f3f2f2;
+  padding: clamp(36px, 6vw, 72px) clamp(18px, 4vw, 44px);
+}
+.contact__num { margin: 0 0 clamp(16px, 2vw, 24px); font-size: 11px; letter-spacing: .16em; opacity: .9; }
+.contact__title {
+  font-size: clamp(34px, 6.5vw, 76px); line-height: .95; letter-spacing: -.04em;
+  margin: 0 0 clamp(18px, 2.5vw, 28px); max-width: 22ch;
+}
+.contact__lede {
+  font-size: clamp(15px, 1.8vw, 19px); line-height: 1.5; max-width: 46ch;
+  margin: 0 0 clamp(22px, 3vw, 34px); font-weight: 600;
+}
+.contact__actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.contact__actions .btn { min-height: 48px; }
+.contact__email { background: #f3f2f2; color: var(--color-accent-700); padding-inline: 20px; font-size: 15px; }
+.contact__email:hover { background: #fff; color: var(--color-accent-700); }
+.contact__link { border-color: #f3f2f2; color: #f3f2f2; padding-inline: 18px; }
+.contact__link:hover { background: color-mix(in srgb, #f3f2f2 16%, transparent); color: #f3f2f2; }
+/* The accent focus ring is invisible against the accent field. */
+.contact :focus-visible { outline-color: #f3f2f2; }
+
+/* — footer ————————————————————————————————————————————————————————————— */
+
+.site-footer {
+  display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline;
+  padding: 22px clamp(18px, 4vw, 44px);
+  border-top: 2px solid var(--color-divider);
+}
+.site-footer__brand { font-size: 12px; font-weight: 800; letter-spacing: .04em; }
+.site-footer__meta { font-size: 12px; color: var(--color-neutral-700); }
+.site-footer__top {
+  margin-left: auto; font-size: 12px; text-decoration: none;
+  display: inline-flex; align-items: center; min-height: 44px;
+}
+
+@media (max-width: 719px) {
+  .site-footer__top { margin-left: 0; }
+}
