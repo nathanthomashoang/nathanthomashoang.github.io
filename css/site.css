@@ -11,6 +11,21 @@ html { scroll-behavior: smooth; }
 
 body { -webkit-font-smoothing: antialiased; }
 
+/* Content gutter — everything in <main> except the marquee is boxed and
+   centered past this width, so the page reads as a column on wide/ultrawide
+   viewports instead of stretching edge to edge. Header and footer stay
+   full-bleed on purpose; the marquee does too (see .marquee below) so its
+   scroll doesn't visibly start/stop inside the gutter. */
+:root { --content-max: 1440px; }
+
+main > .hero,
+main > .section,
+main > .about,
+main > .contact {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
 /* Accent at paragraph size fails contrast on this ground, so links take the
    deep ramp step and brighten to the base accent on hover (see readme.md). */
 a { color: var(--color-accent-700); }
